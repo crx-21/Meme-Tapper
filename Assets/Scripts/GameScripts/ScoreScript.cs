@@ -10,14 +10,14 @@ public class ScoreScript : MonoBehaviour
     Text score;
 
     
+
     void Start()
     {
-        score = GetComponent<Text> ();
+        score = GetComponent<Text>();
     }
 
-    
     void Update()
     {
-        score.text = "" + scoreValue;
+        score.text = scoreValue.ToString();
     }
 }

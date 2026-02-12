@@ -10,6 +10,7 @@ public class GameOver : MonoBehaviour
     public ScoreScript myscoreScript;
     public GameObject myGameOver;
     public GameObject myActiveObjects;
+    public Text finalScoreText;
     private void OnMouseDown()
     {
         myhealthScript.health--;
@@ -20,6 +21,7 @@ public class GameOver : MonoBehaviour
         {
             myGameOver.SetActive(true);
             myActiveObjects.SetActive(false);
+            finalScoreText.text = ScoreScript.scoreValue.ToString();
         }
 
     }

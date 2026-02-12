@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
+
+    public void Hit()
+    {
+       
+      ScoreScript.scoreValue++;
+                Destroy(gameObject);
+           
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,10 +24,5 @@ public class Ball : MonoBehaviour
     {
         
     }
-    private void OnMouseDown()
-    {
-        ScoreScript.scoreValue++;
-        
-        Destroy(gameObject);
-    }
+   
 }
